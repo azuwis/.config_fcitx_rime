@@ -4,4 +4,4 @@ patch:
   schema_list:
     - schema: hepy
     - schema: luna_pinyin_simp
-    - schema: double_pinyin_flypy
+    # - schema: double_pinyin_flypy
