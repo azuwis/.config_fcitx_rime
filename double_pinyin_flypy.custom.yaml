@@ -4,3 +4,5 @@ patch:
   "switches/@0/reset": 1 # default english
   "switches/@2/reset": 1 # default simplified
   "translator/dictionary": luna_pinyin.extended
+  "punctuator/import_preset": symbols
+  "recognizer/patterns/punct": "^/[0-9]*[a-z]*$"
