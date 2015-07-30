@@ -2,6 +2,6 @@
 
 patch:
   schema_list:
-    - schema: hepy
+    - schema: flypy_yinxing
     - schema: luna_pinyin_simp
     # - schema: double_pinyin_flypy
