@@ -57,3 +57,5 @@ punctuator:
 
 key_binder:
   import_preset: default
+  bindings:
+    - {accept: semicolon, send: 2, when: has_menu}
