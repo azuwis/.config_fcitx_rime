@@ -39,6 +39,7 @@ engine:
   translators:
     - punct_translator
     - table_translator
+    - reverse_lookup_translator
   # filters:
   #   - simplifier
   #   - uniquifier
@@ -52,6 +53,16 @@ translator:
   enable_completion: true
   enable_user_dict: false
 
+reverse_lookup:
+  dictionary: pinyin_simp
+  prefix: "`"
+  suffix: "'"
+  tips: 〔拼音〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
 punctuator:
   import_preset: default
 
@@ -59,3 +70,8 @@ key_binder:
   import_preset: default
   bindings:
     - {accept: semicolon, send: 2, when: has_menu}
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
