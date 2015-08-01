@@ -47,6 +47,7 @@ engine:
   #   - uniquifier
 
 speller:
+  delimiter: " '"
   max_code_length: 4
   auto_select: true
 
