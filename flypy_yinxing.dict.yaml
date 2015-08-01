@@ -9,6 +9,14 @@ use_preset_vocabulary: false
 columns:
   - code
   - text
+encoder:
+  rules:
+    - length_equal: 2
+      formula: "AaAbBaBb"
+    - length_equal: 3
+      formula: "AaBaCaCb"
+    - length_in_range: [4, 10]
+      formula: "AaBaCaZa"
 import_tables:
   - flypy_yinxing_upstream
   - flypy_yinxing_custom
