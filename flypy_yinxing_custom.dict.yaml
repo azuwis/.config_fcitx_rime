@@ -18,3 +18,5 @@ encoder:
     - length_in_range: [4, 10]
       formula: "AaBaCaZa"
 ...
+
+jikx	击垮
