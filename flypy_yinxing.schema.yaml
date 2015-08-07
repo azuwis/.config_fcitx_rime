@@ -55,6 +55,8 @@ translator:
   dictionary: flypy_yinxing
   enable_completion: false
   enable_user_dict: false
+  enable_encoder: false
+  enable_sentence: true
 
 reverse_lookup:
   dictionary: pinyin_simp
