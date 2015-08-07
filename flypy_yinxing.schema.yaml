@@ -53,7 +53,7 @@ speller:
 
 translator:
   dictionary: flypy_yinxing
-  enable_completion: true
+  enable_completion: false
   enable_user_dict: false
 
 reverse_lookup:
