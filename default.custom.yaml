@@ -10,3 +10,6 @@ patch:
     Shift_R: noop
     Control_L: commit_code
     Control_R: commit_code
+  key_binder/bindings:
+    - {accept: minus, send: Page_Up, when: has_menu}
+    - {accept: equal, send: Page_Down, when: has_menu}
