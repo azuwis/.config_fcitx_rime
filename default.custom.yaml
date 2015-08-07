@@ -5,3 +5,8 @@ patch:
     - schema: flypy_yinxing
     - schema: luna_pinyin_simp
     # - schema: double_pinyin_flypy
+  ascii_composer/switch_key:
+    Shift_L: noop
+    Shift_R: noop
+    Control_L: commit_code
+    Control_R: commit_code
