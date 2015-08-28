@@ -1,6 +1,8 @@
 # Custom default
 
 patch:
+  switcher/hotkeys:
+    - "Control+grave"
   schema_list:
     - schema: flypy_yinxing
     - schema: luna_pinyin_simp
