@@ -7,6 +7,8 @@ zip="$1"
 
 dict="flypy_yinxing_upstream.dict.yaml"
 
+version=$(unzip -l "$zip" | awk '/百度小鹤.txt/ {print $2}' | sed 's/-/\./g')
+
 cat > "$dict" <<EOF
 # Rime dict
 # encoding: utf-8
@@ -17,7 +19,7 @@ cat > "$dict" <<EOF
 
 ---
 name: flypy_yinxing_upstream
-version: "2015.5.19"
+version: "${version}"
 sort: original
 use_preset_vocabulary: false
 columns:
