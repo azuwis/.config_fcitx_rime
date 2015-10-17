@@ -19,24 +19,24 @@ encoder:
       formula: "AaBaCaZa"
 ...
 
-of	ofyu 圆圈数字 ⑩
-of	ofku 括号数字 ⑽
-of	ofdu 点数字　 ⒑
-of	ofvu 中文数字 ㈩
-of	ofld 罗马大写 Ⅲ
-of	oflx 罗马小写 ⅲ
-of	ofdw 单位符号 ㎡
-of	ofpy 拼音字母 ǎ
-of	ofhb 货币符号 ￥
-of	ofjt 箭头符号 →
-of	oftu 特殊符号 ℃
-of	ofpp 偏旁部首 冫
-of	ofbd 标点符号 〖〗
-of	ofux 数学符号 ÷
-of	ofxd 希腊大写 Ω
-of	ofxx 希腊小写 β
-of	ofrd 日文大写 ア
-of	ofrx 日文小写 あ
+of	⑩~yu
+of	⑽~ku
+of	⒑~du
+of	㈩~vu
+of	Ⅲ~ld
+of	ⅲ~lx
+of	㎡~dw
+of	ǎ~py
+of	￥~hb
+of	→~jt
+of	℃~tu
+of	冫~pp
+of	〖~bd
+of	÷~ux
+of	Ω~xd
+of	β~xx
+of	ア~rd
+of	あ~rx
 jikx	击垮
 yrjn	圆角
 ninx	妳
