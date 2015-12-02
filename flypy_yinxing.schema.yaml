@@ -17,8 +17,9 @@ switches:
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
-  # - name: simplification
-  #   states: [ 漢字, 汉字 ]
+  - name: simplification
+    reset: 0
+    states: [ 汉字, 漢字 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -42,9 +43,9 @@ engine:
     - punct_translator
     - table_translator
     - reverse_lookup_translator
-  # filters:
-  #   - simplifier
-  #   - uniquifier
+  filters:
+    - simplifier
+    # - uniquifier
 
 speller:
   delimiter: " '"
@@ -67,6 +68,11 @@ reverse_lookup:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
+
+simplifier:
+  opencc_config: zhs2zht.ini
+  # for opencc 1.0
+  # opencc_config: s2t.json
 
 punctuator:
   import_preset: default
