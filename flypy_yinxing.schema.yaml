@@ -31,8 +31,9 @@ engine:
     - speller
     - punctuator
     - selector
-    # - navigator
-    - express_editor
+    - navigator
+    - fluency_editor
+    # - express_editor
   segmentors:
     - ascii_segmentor
     - matcher
