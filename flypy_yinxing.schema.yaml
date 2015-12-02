@@ -80,7 +80,7 @@ punctuator:
 key_binder:
   import_preset: default
   bindings:
-    - {accept: semicolon, send: 2, when: has_menu}
+    - { when: composing, accept: semicolon, send: 2 }
 
 recognizer:
   import_preset: default
