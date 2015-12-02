@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Download PC版拼音挂接/百度小鹤.zip from http://flypy.ys168.com/
-# Run ./flypy_yinxing_upstream.dict.sh 百度小鹤.zip
+# Run:
+#     ./update-flypy.sh 百度小鹤.zip
 
 zip="$1"
 
