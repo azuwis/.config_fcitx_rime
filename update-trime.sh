@@ -3,7 +3,7 @@ set -eu
 
 cd "$(dirname "$(readlink -f "$0")")"
 
-for i in flypy_yinxing*.yaml /usr/share/rime-data/pinyin_simp.*.yaml /usr/share/rime-data/default.yaml
+for i in trime.custom.yaml flypy_yinxing*.yaml /usr/share/rime-data/pinyin_simp.*.yaml /usr/share/rime-data/default.yaml
 do
     adb push "$i" /sdcard/rime/
 done
