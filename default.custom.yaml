@@ -4,7 +4,7 @@ patch:
   switcher/hotkeys:
     - "Control+grave"
   schema_list:
-    - schema: flypy_yinxing
+    - schema: flypy
     - schema: luna_pinyin_simp
     # - schema: double_pinyin_flypy
   ascii_composer/switch_key:

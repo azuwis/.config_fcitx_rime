@@ -2,11 +2,11 @@
 # encoding: utf-8
 
 schema:
-  name: 小鹤音形
-  schema_id: flypy_yinxing
+  name: 小鹤双拼
+  schema_id: flypy
   version: "0.1"
   author:
-    - 小鹤音形 by 鹤 <http://flypy.com>
+    - 小鹤双拼 by 鹤 <http://flypy.com>
     - Rime schema by Zhong Jianxin <azuwis@gmail.com>
   dependencies:
     - pinyin_simp
@@ -53,7 +53,7 @@ speller:
   auto_select: true
 
 translator:
-  dictionary: flypy_yinxing
+  dictionary: flypy
   enable_completion: false
   enable_user_dict: false
   enable_encoder: false
