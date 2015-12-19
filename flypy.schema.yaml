@@ -53,7 +53,7 @@ speller:
   auto_select: true
 
 translator:
-  dictionary: flypy
+  dictionary: flypy.extended
   enable_completion: false
   enable_user_dict: false
   enable_encoder: false
