@@ -71,9 +71,10 @@ reverse_lookup:
     - xform/([jqxy])v/$1u/
 
 simplifier:
-  opencc_config: zhs2zht.ini
+  # for opencc 0.4
+  # opencc_config: zhs2zht.ini
   # for opencc 1.0
-  # opencc_config: s2t.json
+  opencc_config: s2t.json
 
 punctuator:
   import_preset: default
