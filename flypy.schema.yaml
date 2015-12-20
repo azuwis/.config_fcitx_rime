@@ -51,13 +51,14 @@ speller:
   delimiter: " '"
   max_code_length: 4
   auto_select: true
+  auto_clear: max_length
 
 translator:
   dictionary: flypy.extended
   enable_completion: false
   enable_user_dict: false
   enable_encoder: false
-  enable_sentence: true
+  enable_sentence: false
 
 reverse_lookup:
   dictionary: pinyin_simp
@@ -81,6 +82,8 @@ key_binder:
   import_preset: default
   bindings:
     - { when: composing, accept: semicolon, send: 2 }
+    - { when: composing, accept: space, send: Escape }
+    - { when: has_menu, accept: space, send: space }
 
 recognizer:
   import_preset: default
