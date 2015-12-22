@@ -51,7 +51,7 @@ speller:
   delimiter: " '"
   max_code_length: 4
   auto_select: true
-  auto_clear: max_length
+  # auto_clear: max_length
 
 translator:
   dictionary: flypy.extended
