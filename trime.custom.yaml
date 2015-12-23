@@ -1,5 +1,6 @@
 patch:
   "style/color_scheme": google
+  "style/longpress_timeout": 300
   # "style/keyboards": [default, number]
   "preset_keyboards/flypy":
     name: 小鹤双拼
