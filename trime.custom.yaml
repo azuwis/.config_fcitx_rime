@@ -42,7 +42,7 @@ patch:
     - {click: 'k', long_click: ':'}
     - {click: 'l', long_click: ';'}
     - {width: 5}
-    - {click: Shift_L, composing: "'", send_bindings: true}
+    - {click: Shift_L}
     - {click: 'z', long_click: '`'}
     - {click: 'x', long_click: cut}
     - {click: 'c', long_click: copy}
@@ -53,8 +53,8 @@ patch:
     - {click: BackSpace, width: 20}
     - {click: Mode_switch, long_click: Menu, width: 15}
     - {click: Keyboard_number, long_click: Keyboard_symbols}
-    - {click: ',', long_click: '<', paging: Page_Up}
     - {click: space, width: 30}
-    - {click: '.', long_click: '>', has_menu: Page_Down}
+    - {click: ',', long_click: '<'}
+    - {click: '.', long_click: '>'}
     - {click: '/', long_click: '?'}
     - {click: Return, long_click: CommitComment, composing: SecondChoice, send_bindings: true, width: 15}
