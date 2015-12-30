@@ -2,6 +2,7 @@ patch:
   "style/color_scheme": google
   "style/longpress_timeout": 300
   # "style/keyboards": [default, number]
+  "preset_keys/SecondChoice": {label: 次選, send: semicolon}
   "preset_keyboards/flypy":
     name: 小鹤双拼
     author: "Zhong Jianxin <azuwis@gmail.com>"
@@ -55,4 +56,4 @@ patch:
     - {click: space, width: 30}
     - {click: '.', long_click: '>', has_menu: Page_Down}
     - {click: '/', long_click: '?'}
-    - {click: Return, long_click: CommitComment, composing: '2', send_bindings: true, width: 15}
+    - {click: Return, long_click: CommitComment, composing: SecondChoice, send_bindings: true, width: 15}
