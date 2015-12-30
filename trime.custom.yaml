@@ -55,4 +55,4 @@ patch:
     - {click: space, width: 30}
     - {click: '.', long_click: '>', has_menu: Page_Down}
     - {click: '/', long_click: '?'}
-    - {click: Return, long_click: CommitComment, width: 15}
+    - {click: Return, long_click: CommitComment, composing: '2', send_bindings: true, width: 15}
