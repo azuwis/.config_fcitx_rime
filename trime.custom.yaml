@@ -1,7 +1,9 @@
 patch:
   "style/color_scheme": google
   "style/longpress_timeout": 300
+  "style/round_corner": 0.0
   # "style/keyboards": [default, number]
+  "preset_keys/SecondChoice": {label: 次選, send: semicolon}
   "preset_keyboards/flypy":
     name: 小鹤双拼
     author: "Zhong Jianxin <azuwis@gmail.com>"
@@ -50,10 +52,9 @@ patch:
     - {click: 'm', long_click: Delete}
     - {click: BackSpace, width: 20}
     - {click: Mode_switch, long_click: Menu, width: 15}
-    - {click: 'Keyboard_number', long_click: Color_switch}
-    - {click: "'", long_click: '"'}
-    - {click: space, width: 20}
+    - {click: Keyboard_number, long_click: Keyboard_symbols}
+    - {click: space, width: 30}
     - {click: ',', long_click: '<'}
     - {click: '.', long_click: '>'}
     - {click: '/', long_click: '?'}
-    - {click: Return, long_click: CommitComment, width: 15}
+    - {click: Return, long_click: CommitComment, composing: SecondChoice, send_bindings: true, width: 15}
