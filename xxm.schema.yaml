@@ -103,4 +103,4 @@ key_binder:
 
 recognizer:
   patterns:
-    reverse_lookup: "^`[a-z]*'?$"
+    reverse_lookup: "`[a-z]*'?$"
