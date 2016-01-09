@@ -45,11 +45,11 @@ EOF
 unrar -inul p "$archive" 小兮码文件/码表/小兮码多多版.txt \
     | iconv -f UTF16 -t UTF8 \
     | fromdos \
-    | sed -e '/config/d' \
+    | sed -e '/config/d' -e 's/ //g' \
           >> "$dict"
 
 unrar -inul p "$archive" 小兮码文件/码表/user2多多版.txt \
     | fromdos \
-    | sed -e '/config/d' -e '/\$LAST/d' -e 's/\$LEFT//' \
+    | sed -e '/config/d' -e 's/ //g' -e '/\$LAST/d' -e 's/\$LEFT//' \
     | awk '!a[$0]++' \
           >> "$dict"
