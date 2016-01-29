@@ -51,6 +51,6 @@ unrar -inul p "$archive" 小兮码文件/码表/小兮码多多版.txt \
 unrar -inul p "$archive" 小兮码文件/码表/user2多多版.txt \
     | fromdos \
     | sed -e '/config/d' -e 's/ //g' -e '/\$LAST/d' -e 's/\$LEFT//' \
-    | sed -e '/xlaa$/d' -e 's/^\[il\]/[i.]/' -e '/^\[mu\]/d' \
+    | sed -e '/xlaa$/d' -e 's/^\[il\]/[i.]/' -e '/^\[mu\]/d' -e '/\tdjav$/d' \
     | awk '!a[$0]++' \
           >> "$dict"
