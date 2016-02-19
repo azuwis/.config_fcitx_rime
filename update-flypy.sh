@@ -6,7 +6,7 @@
 
 zip="$1"
 
-dict="flypy.upstream.dict.yaml"
+dict="flypy.dict.yaml"
 
 version=$(unzip -l "$zip" | awk '/百度小鹤.txt/ {print $2}' | sed 's/-/\./g')
 
