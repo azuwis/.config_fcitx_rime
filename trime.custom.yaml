@@ -1,5 +1,6 @@
 patch:
   "style/color_scheme": google
+  "style/inline_preedit": false
   "style/longpress_timeout": 300
   "style/round_corner": 0.0
   # "style/keyboards": [qwerty0, symbols, number]
