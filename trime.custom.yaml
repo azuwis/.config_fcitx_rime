@@ -6,7 +6,19 @@ patch:
   "style/soft_cursor": false
   # "style/round_corner": 0.0
   # "style/keyboards": [qwerty0, symbols, number]
-  "preset_keys/SecondChoice": {label: 次選, send: semicolon}
+  "preset_keys/BackSpace": {label: ⌫, repeatable: true, send: BackSpace}
+  "preset_keys/Hide": {label: 隐藏, send: BACK}
+  "preset_keys/Keyboard_number": {label: 数字, send: Eisu_toggle, select: number}
+  "preset_keys/Keyboard_symbols": {label: 符号, send: Eisu_toggle, select: symbols}
+  "preset_keys/Menu": {label: 选单, send: Menu}
+  "preset_keys/Mode_switch": {toggle: ascii_mode, send: Mode_switch, states: [ 中, 英 ]}
+  "preset_keys/Page_Down": {label: 下页, send: Page_Down}
+  "preset_keys/Page_Up": {label: 上页, send: Page_Up}
+  "preset_keys/SecondChoice": {label: ⎇, send: semicolon}
+  "preset_keys/Shift_L": {label: ⇧, send: Shift_L}
+  "preset_keys/copy": {label: 复制, send: Control+c}
+  "preset_keys/paste": {label: 贴上, send: Control+v}
+  "preset_keys/select_all": {label: 全选, send: Control+a}
   "preset_keyboards/flypy":
     name: 小鹤双拼
     author: "Zhong Jianxin <azuwis@gmail.com>"
@@ -60,4 +72,4 @@ patch:
     - {click: ',', long_click: '<'}
     - {click: '.', long_click: '>'}
     - {click: '/', long_click: '?'}
-    - {click: Return, long_click: CommitComment, composing: SecondChoice, send_bindings: true, width: 15}
+    - {click: Return, composing: SecondChoice, send_bindings: true, width: 15}
