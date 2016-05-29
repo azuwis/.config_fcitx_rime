@@ -2,6 +2,8 @@ patch:
   # "style/color_scheme": google
   "style/inline_preedit": false
   "style/longpress_timeout": 300
+  "style/key_vibrate": true
+  "style/soft_cursor": false
   # "style/round_corner": 0.0
   # "style/keyboards": [qwerty0, symbols, number]
   "preset_keys/SecondChoice": {label: 次選, send: semicolon}
