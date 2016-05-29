@@ -13,4 +13,5 @@ sed -e '/- schema:/d' -e '/^schema_list:/a \  - schema: flypy' /usr/share/rime-d
 adb push "$temp_file" /sdcard/rime/default.yaml
 rm "$temp_file"
 
-adb shell am start -n com.osfans.trime/.Pref
+# adb shell am start -n com.osfans.trime/.Pref
+adb shell am broadcast -a com.osfans.trime.deploy
