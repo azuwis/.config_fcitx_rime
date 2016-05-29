@@ -14,4 +14,5 @@ adb push "$temp_file" /sdcard/rime/default.yaml
 rm "$temp_file"
 
 # adb shell am start -n com.osfans.trime/.Pref
+# adb shell rm /sdcard/rime/trime.yaml
 adb shell am broadcast -a com.osfans.trime.deploy
