@@ -75,6 +75,7 @@ reverse_lookup:
 
 punctuator:
   half_shape:
+    "\\": "、"
     "!": {commit: "！"}
     "\"": {pair: ["“", "”"]}
     "$": {commit: "￥"}
