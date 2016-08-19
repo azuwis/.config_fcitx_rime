@@ -1,0 +1,103 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: xmzc
+  name: "兮码字词"
+  version: "1"
+  author:
+    - 发明人 猎鹞
+  dependencies:
+    - pinyin_simp
+
+switches:
+  - name: ascii_mode
+    reset: 1
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    reset: 0
+    states: [ 汉字, 漢字 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    # - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - table_translator
+    - reverse_lookup_translator
+  filters:
+    - simplifier
+
+speller:
+  alphabet: "1234567890qwertasdfgzxcvbyuiophjkl;nm,./'"
+  auto_select: true
+
+translator:
+  dictionary: xmzc
+  enable_charset_filter: false
+  enable_sentence: false
+  enable_encoder: false
+  encode_commit_history: false
+  enable_user_dict: false
+  enable_completion: true
+  max_phrase_length: 5
+
+reverse_lookup:
+  dictionary: pinyin_simp
+  prefix: "`"
+  suffix: "'"
+  tips: 〔拼音〕
+  preedit_format:
+    - xform/([nl])v/$1ü/
+    - xform/([nl])ue/$1üe/
+    - xform/([jqxy])v/$1u/
+
+simplifier:
+  # for opencc 0.4
+  # opencc_config: zhs2zht.ini
+  # for opencc 1.0
+  opencc_config: s2t.json
+
+punctuator:
+  half_shape:
+    "\\": ["、", "\\", "＼"]
+    "!": {commit: "！"}
+    "\"": {pair: ["“", "”"]}
+    "$": {commit: "￥"}
+    "(": "（"
+    ")": "）"
+    "-": "－"
+    ":": {commit: "："}
+    "<": {commit: "《"}
+    ">": {commit: "》"}
+    "?": {commit: "？"}
+    "^": {commit: "……"}
+    "{": ["『", "〖", "｛"]
+    "|": ["·", "｜", "§", "¦"]
+    "}": ["』", "〗", "｝"]
+    "~": "～"
+
+key_binder:
+  bindings:
+    - { when: has_menu, accept: minus, send: Page_Up }
+    - { when: has_menu, accept: equal, send: Page_Down }
+recognizer:
+  patterns:
+    reverse_lookup: "^a[a-z]*'?$"
