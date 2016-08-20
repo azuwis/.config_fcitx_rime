@@ -100,4 +100,4 @@ key_binder:
     - { when: has_menu, accept: equal, send: Page_Down }
 recognizer:
   patterns:
-    reverse_lookup: "^a[a-z]*'?$"
+    reverse_lookup: "`[a-z]*'?$"
