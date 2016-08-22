@@ -98,6 +98,7 @@ key_binder:
   bindings:
     - { when: has_menu, accept: minus, send: Page_Up }
     - { when: has_menu, accept: equal, send: Page_Down }
+
 recognizer:
   patterns:
     reverse_lookup: "`[a-z]*'?$"
