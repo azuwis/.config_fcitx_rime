@@ -40,24 +40,21 @@ engine:
     - fallback_segmentor
   translators:
     - punct_translator
-    - table_translator
     - reverse_lookup_translator
+    - table_translator
   filters:
     - simplifier
 
 speller:
   alphabet: "1234567890qwertasdfgzxcvbyuiophjkl;nm,./'"
+  initials: "qwrtsdfgxcbyiphjklnm"
   auto_select: true
 
 translator:
   dictionary: xmzc
-  enable_charset_filter: false
-  enable_sentence: false
-  enable_encoder: false
-  encode_commit_history: false
   enable_user_dict: false
-  enable_completion: true
-  max_phrase_length: 5
+  enable_encoder: false
+  enable_sentence: false
 
 reverse_lookup:
   dictionary: pinyin_simp
@@ -70,15 +67,17 @@ reverse_lookup:
     - xform/([jqxy])v/$1u/
 
 simplifier:
-  # for opencc 0.4
-  # opencc_config: zhs2zht.ini
-  # for opencc 1.0
   opencc_config: s2t.json
 
 punctuator:
   half_shape:
+    ",": "，"
+    ".": "。"
+    "/": "、"
+    ";": "；"
     "\\": ["、", "\\", "＼"]
     "!": {commit: "！"}
+    "'" : {pair: ['‘', '’']}
     "\"": {pair: ["“", "”"]}
     "$": {commit: "￥"}
     "(": "（"
@@ -94,11 +93,11 @@ punctuator:
     "}": ["』", "〗", "｝"]
     "~": "～"
 
+recognizer:
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
+
 key_binder:
   bindings:
     - { when: has_menu, accept: minus, send: Page_Up }
     - { when: has_menu, accept: equal, send: Page_Down }
-
-recognizer:
-  patterns:
-    reverse_lookup: "`[a-z]*'?$"
