@@ -6,7 +6,7 @@ schema:
   schema_id: xfsm
   version: "0.1"
   author:
-    - 西风瘦码 by 化外愚民 <http://shouma.six168.com/>
+    - 西风瘦码 by 化外愚民 <http://tieba.baidu.com/f?kw=%CE%F7%B7%E7%CA%DD%C2%EB>
     - Rime schema by Zhong Jianxin <azuwis@gmail.com>
   dependencies:
     - pinyin_simp
@@ -17,9 +17,9 @@ switches:
     states: [ 中文, 西文 ]
   - name: full_shape
     states: [ 半角, 全角 ]
-  # - name: simplification
-  #   reset: 0
-  #   states: [ 汉字, 漢字 ]
+  - name: simplification
+    reset: 0
+    states: [ 汉字, 漢字 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -43,12 +43,12 @@ engine:
     - punct_translator
     - table_translator
     - reverse_lookup_translator
-  # filters:
-    # - simplifier
-    # - uniquifier
+  filters:
+    - simplifier
 
 speller:
   alphabet: "abcdefghijklmnopqrstuvwxyz;',./]ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+  initials: "qwrtsdfgzxcvbyphjklnm"
   auto_select: true
 
 translator:
@@ -67,15 +67,18 @@ reverse_lookup:
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
 
-# simplifier:
-  # for opencc 0.4
-  # opencc_config: zhs2zht.ini
-  # for opencc 1.0
-  # opencc_config: s2t.json
+simplifier:
+  opencc_config: s2t.json
 
 punctuator:
   half_shape:
+    ",": "，"
+    ".": "。"
+    "/": "、"
+    ";": "；"
+    "\\": ["、", "\\", "＼"]
     "!": {commit: "！"}
+    "'" : {pair: ['‘', '’']}
     "\"": {pair: ["“", "”"]}
     "$": {commit: "￥"}
     "(": "（"
@@ -94,13 +97,11 @@ punctuator:
     "}": ["』", "〗", "｝"]
     "~": "～"
 
+recognizer:
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
+
 key_binder:
   bindings:
     - { when: has_menu, accept: minus, send: Page_Up }
     - { when: has_menu, accept: equal, send: Page_Down }
-    - { when: composing, accept: space, send: Escape }
-    - { when: has_menu, accept: space, send: space }
-
-recognizer:
-  patterns:
-    reverse_lookup: "`[a-z]*'?$"
