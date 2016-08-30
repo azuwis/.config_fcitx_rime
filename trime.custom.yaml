@@ -7,6 +7,7 @@ patch:
   # "style/round_corner": 0.0
   # "style/keyboards": [qwerty0, symbols, number]
   "preset_keys/BackSpace": {label: ⌫, repeatable: true, send: BackSpace}
+  "preset_keys/CommitComment": {label: 編碼, send: Control+Shift+Return}
   "preset_keys/Hide": {label: 隐藏, send: BACK}
   "preset_keys/Keyboard_number": {label: 数字, send: Eisu_toggle, select: number}
   "preset_keys/Keyboard_symbols": {label: 符号, send: Eisu_toggle, select: symbols}
@@ -16,6 +17,7 @@ patch:
   "preset_keys/Page_Up": {label: 上页, send: Page_Up}
   "preset_keys/SecondChoice": {label: ⎇, send: semicolon}
   "preset_keys/Shift_L": {label: ⇧, send: Shift_L}
+  "preset_keys/Time": {label: 时间, send: function, command: date, option: "HH:mm:ss"}
   "preset_keys/copy": {label: 复制, send: Control+c}
   "preset_keys/paste": {label: 贴上, send: Control+v}
   "preset_keys/select_all": {label: 全选, send: Control+a}
