@@ -3,8 +3,10 @@ patch:
   "style/inline_preedit": false
   "style/longpress_timeout": 300
   "style/key_vibrate": true
+  "style/horizontal_gap": 0
+  "style/vertical_gap": 0
   "style/soft_cursor": false
-  # "style/round_corner": 0.0
+  "style/round_corner": 0.0
   # "style/keyboards": [qwerty0, symbols, number]
   "preset_keys/BackSpace": {label: ⌫, repeatable: true, send: BackSpace}
   "preset_keys/CommitComment": {label: 編碼, send: Control+Shift+Return}
