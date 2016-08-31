@@ -51,7 +51,7 @@ speller:
   auto_select: true
 
 translator:
-  dictionary: xmzc
+  dictionary: xmzc.extended
   enable_user_dict: false
   enable_encoder: false
   enable_sentence: false
