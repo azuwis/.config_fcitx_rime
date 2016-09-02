@@ -9,7 +9,7 @@ patch:
   "style/round_corner": 0.0
   # "style/keyboards": [qwerty0, symbols, number]
   "preset_keys/BackSpace": {label: ⌫, repeatable: true, send: BackSpace}
-  "preset_keys/CommitComment": {label: 編碼, send: Control+Shift+Return}
+  "preset_keys/CommitComment": {label: 编码, send: Control+Shift+Return}
   "preset_keys/Hide": {label: 隐藏, send: BACK}
   "preset_keys/Keyboard_number": {label: 数字, send: Eisu_toggle, select: number}
   "preset_keys/Keyboard_symbols": {label: 符号, send: Eisu_toggle, select: symbols}
