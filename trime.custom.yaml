@@ -50,8 +50,7 @@ patch:
     - {click: 'i', long_click: ']'}
     - {click: 'o', long_click: '{'}
     - {click: 'p', long_click: '}'}
-    - {width: 5}
-    - {click: 'a', long_click: select_all }
+    - {click: 'a', long_click: select_all, width: 15}
     - {click: 's', long_click: Home}
     - {click: 'd', long_click: End}
     - {click: 'f', long_click: Page_Up}
@@ -59,8 +58,7 @@ patch:
     - {click: 'h', long_click: Left}
     - {click: 'j', long_click: Down}
     - {click: 'k', long_click: ':'}
-    - {click: 'l', long_click: ';'}
-    - {width: 5}
+    - {click: 'l', long_click: ';', width: 15}
     - {click: Shift_L}
     - {click: 'z', long_click: '`'}
     - {click: 'x', long_click: cut}
@@ -104,8 +102,7 @@ patch:
     - {click: 'i', long_click: ']'}
     - {click: 'o', long_click: '{'}
     - {click: 'p', long_click: '}'}
-    - {width: 5}
-    - {click: 'a', long_click: select_all }
+    - {click: 'a', long_click: select_all, width: 15 }
     - {click: 's', long_click: Home}
     - {click: 'd', long_click: End}
     - {click: 'f', long_click: Page_Up}
@@ -113,8 +110,7 @@ patch:
     - {click: 'h', long_click: Left}
     - {click: 'j', long_click: Down}
     - {click: 'k', long_click: ':'}
-    - {click: 'l', long_click: ';'}
-    - {width: 5}
+    - {click: 'l', long_click: ';', width: 15}
     - {click: Shift_L}
     - {click: 'z', long_click: '`'}
     - {click: 'x', long_click: cut}
