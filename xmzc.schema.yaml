@@ -47,7 +47,8 @@ engine:
 
 speller:
   alphabet: "1234567890qwertasdfgzxcvbyuiophjkl;nm,./'"
-  initials: "qwrtsdfgxcbyiphjklnm"
+  # initials: "qwrtsdfgxcbyiphjklnm"
+  initials: "1234567890qwertasdfgzxcvbyuiophjklnm"
   auto_select: true
 
 translator:
