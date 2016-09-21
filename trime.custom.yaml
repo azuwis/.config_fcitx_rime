@@ -1,6 +1,7 @@
 patch:
   # "style/color_scheme": google
-  "style/inline_preedit": false
+  "style/candidate_spacing": 0
+  "style/inline_preedit": none
   "style/longpress_timeout": 300
   "style/key_vibrate": true
   "style/horizontal_gap": 0
