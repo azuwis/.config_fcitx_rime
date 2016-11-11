@@ -7,7 +7,7 @@ patch:
   "style/horizontal_gap": 0
   "style/vertical_gap": 0
   "style/soft_cursor": false
-  "style/round_corner": 0.0
+  "style/round_corner": 0
   # "style/keyboards": [qwerty0, symbols, number]
   "preset_keys/BackSpace": {label: ⌫, repeatable: true, send: BackSpace}
   "preset_keys/CommitComment": {label: 编码, send: Control+Shift+Return}
@@ -75,7 +75,7 @@ patch:
     - {click: ',', long_click: '<'}
     - {click: '.', long_click: '>'}
     - {click: '/', long_click: '?'}
-    - {click: Return, composing: SecondChoice, send_bindings: true, width: 15}
+    - {click: Return, composing: SecondChoice, width: 15}
   "preset_keyboards/xmzc":
     name: 小兮字词
     author: "Zhong Jianxin <azuwis@gmail.com>"
