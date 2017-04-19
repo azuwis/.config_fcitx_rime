@@ -1,14 +1,14 @@
 #!/bin/sh
 
-# Download PC版拼音挂接/百度小鹤.zip from http://flypy.ys168.com/
+# Download flypy_Setup_*.exe from http://flypy.ys168.com/
 # Run:
-#     ./update-flypy.sh 百度小鹤.zip
+#     ./update-flypy.sh flypy_Setup_*.exe
 
-zip="$1"
+file="$1"
 
 dict="flypy.dict.yaml"
 
-version=$(unzip -l "$zip" | awk '/百度小鹤.txt/ {print $2}' | sed 's/-/\./g')
+version="$(echo "$file" | grep -o '[0-9][0-9.]*[0-9]')"
 
 cat > "$dict" <<EOF
 # Rime dict
@@ -21,11 +21,12 @@ cat > "$dict" <<EOF
 ---
 name: flypy
 version: "${version}"
-sort: original
+sort: by_weight
 use_preset_vocabulary: false
 columns:
   - code
   - text
+  - weight
 encoder:
   rules:
     - length_equal: 2
@@ -38,8 +39,10 @@ encoder:
 
 EOF
 
-unzip -p "$zip" 百度小鹤/百度小鹤.txt \
-    | iconv -f UTF16 -t UTF8 \
-    | fromdos \
-    | sed -e '/\$/d' -e '/=\//d' -e 's/^[0-9]\+,//' -e 's/=/\t/' \
+7z e -so "$file" '$dataFiles$\main.dmg' \
+    | ruby ddime2txt.rb a 啊 \
+    | grep -v '$ddcmd([a-z/<]' \
+    | grep -v '$ddcmd.*keyboard' \
+    | grep -v '' \
+    | sed -e 's/\(..*\)$ddcmd(\(.*\),..*)\(..*\)/\1\2\3/' \
     >> "$dict"
