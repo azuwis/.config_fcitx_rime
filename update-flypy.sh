@@ -8,7 +8,7 @@ file="$1"
 
 dict="flypy.dict.yaml"
 
-version="$(echo "$file" | grep -o '[0-9][0-9.]*[0-9]')"
+version="$(echo "$file" | grep -o '[0-9][0-9.-]*[0-9]')"
 
 cat > "$dict" <<EOF
 # Rime dict
