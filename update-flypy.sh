@@ -21,12 +21,11 @@ cat > "$dict" <<EOF
 ---
 name: flypy
 version: "${version}"
-sort: by_weight
+sort: original
 use_preset_vocabulary: false
 columns:
   - code
   - text
-  - weight
 encoder:
   rules:
     - length_equal: 2
@@ -40,9 +39,9 @@ encoder:
 EOF
 
 7z e -so "$file" '$dataFiles$\main.dmg' \
-    | ruby ddime2txt.rb a 啊 '%{code}	%{text}	%{weight}' \
+    | ruby ddime2txt.rb a 啊 '%{code}	%{text}' \
     | grep -v '$ddcmd([a-z/<]' \
     | grep -v '$ddcmd.*keyboard' \
     | grep -v '' \
-    | sed -e 's/\(..*\)$ddcmd(\(.*\),..*)\(..*\)/\1\2\3/' \
+    | sed -e 's/\(..*\)$ddcmd(\(.*\),..*)/\1\2/' \
     >> "$dict"
