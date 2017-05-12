@@ -43,11 +43,13 @@ engine:
     - punct_translator
     - table_translator
     - reverse_lookup_translator
+    - history_translator@history
   filters:
     - simplifier
     # - uniquifier
 
 speller:
+  alphabet: "abcdefghijklmnopqrstuvwxyz;"
   delimiter: " '"
   max_code_length: 4
   auto_select: true
@@ -69,6 +71,11 @@ reverse_lookup:
     - xform/([nl])v/$1ü/
     - xform/([nl])ue/$1üe/
     - xform/([jqxy])v/$1u/
+
+history:
+  input: ;f
+  size: 1
+  initial_quality: 1000
 
 simplifier:
   # for opencc 0.4
