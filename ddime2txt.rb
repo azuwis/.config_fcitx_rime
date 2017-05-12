@@ -2,6 +2,7 @@
 
 code = ARGV.shift
 text = ARGV.shift
+format = ARGV.shift
 
 ARGF.binmode
 data = ARGF.read()
@@ -27,6 +28,6 @@ loop do
   text = data[index..index+text_lenght-1]
   index = index + text_lenght
 
-  puts "#{code}\t#{text}\t#{weight}"
+  puts format % {:code=>code, :text=>text, :weight=>weight}
   break if index >= data.size
 end
