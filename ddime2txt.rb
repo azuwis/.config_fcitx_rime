@@ -1,14 +1,28 @@
 #!/usr/bin/ruby
 
-code = ARGV.shift
-text = ARGV.shift
 format = ARGV.shift
-
 ARGF.binmode
 data = ARGF.read()
 
-pattern = code + (text.size * 3).chr + text
-offset = data.index(pattern.force_encoding('ASCII-8BIT')) - 5
+offset = -1
+pattern = Regexp.new(/....([\x01-\x06])([a-z]{1,7})/n)
+loop do
+  match = pattern.match(data, offset + 1)
+  offset = match.begin(0)
+  code_length = match[1].unpack('C')[0]
+  if code_length == match[2].size or code_length == match[2].size - 1
+    text_length = data[offset+4+1+code_length].unpack('C')[0]
+    if text_length > 0
+      text = data[offset+4+1+code_length+1..offset+4+1+code_length+1+text_length-1].force_encoding('utf-8')
+      begin
+        is_utf8 = text =~ /^(\p{Han}|[[:graph:]])+$/u
+      rescue Exception
+        is_utf8 = false
+      end
+      break if is_utf8
+    end
+  end
+end
 
 index = offset
 loop do

@@ -39,7 +39,7 @@ encoder:
 EOF
 
 7z e -so "$file" '$dataFiles$\main.dmg' \
-    | ruby ddime2txt.rb a 啊 '%{code}	%{text}' \
+    | ruby ddime2txt.rb '%{code}	%{text}' \
     | grep -v '$ddcmd([a-z/<]' \
     | grep -v '$ddcmd.*keyboard' \
     | grep -v '' \
