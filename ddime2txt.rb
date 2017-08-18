@@ -32,15 +32,15 @@ loop do
 
   index = index + 2 # unknown
 
-  code_lenght = data[index].unpack('C')[0]
+  code_length = data[index].unpack('C')[0]
   index = index + 1
-  code = data[index..index+code_lenght-1]
-  index = index + code_lenght
+  code = data[index..index+code_length-1]
+  index = index + code_length
 
-  text_lenght = data[index].unpack('C')[0]
+  text_length = data[index].unpack('C')[0]
   index = index + 1
-  text = data[index..index+text_lenght-1]
-  index = index + text_lenght
+  text = data[index..index+text_length-1]
+  index = index + text_length
 
   puts format % {:code=>code, :text=>text, :weight=>weight}
   break if index >= data.size
