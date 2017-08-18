@@ -2,7 +2,7 @@
 
 # Download flypy_Setup_*.exe from http://flypy.ys168.com/
 # Run:
-#     ./update-flypy.sh flypy_Setup_*.exe
+#     ./flypy.sh flypy_Setup_*.exe
 
 file="$1"
 

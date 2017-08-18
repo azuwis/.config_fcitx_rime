@@ -3,7 +3,7 @@
 # Download 键道音笔*.rar from http://daniushuangpin.ys168.com/
 # Unpack to get JDYBsetup*.exe
 # Run:
-#     ./update-jdyb.sh JDYBsetup*.exe
+#     ./jdyb.sh JDYBsetup*.exe
 
 file="$1"
 

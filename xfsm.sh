@@ -2,7 +2,7 @@
 
 # Download 西风瘦码.7z from http://yunpan.cn/QCy5Ak9ZM5zya (code 3500)
 # Run:
-#     ./update-xfsm.sh 西风瘦码.7z
+#     ./xfsm.sh 西风瘦码.7z
 
 archive="$1"
 

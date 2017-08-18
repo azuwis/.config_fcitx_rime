@@ -2,7 +2,7 @@
 
 # Download 小兮码新文件.rar from http://tieba.baidu.com/p/3485999115
 # Run:
-#     ./update-xxm.sh 小兮码新文件.rar
+#     ./xxm.sh 小兮码新文件.rar
 
 archive="$1"
 

@@ -2,7 +2,7 @@
 
 # Download 哲哲豆音形码/哲豆音形大圆满版词库___多多格式.txt from http://zzdzzd.ys168.com/
 # Run:
-#     ./update-zzd.sh 哲豆音形大圆满版词库___多多格式.txt 2015.12.14
+#     ./zzd.sh 哲豆音形大圆满版词库___多多格式.txt 2015.12.14
 
 table="$1"
 version=$2
