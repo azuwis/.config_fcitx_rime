@@ -22,11 +22,12 @@ cat > "$dict" <<EOF
 ---
 name: jdyb
 version: "${version}"
-sort: original
+sort: by_weight
 use_preset_vocabulary: false
 columns:
   - code
   - text
+  - weight
 encoder:
   rules:
     - length_equal: 2
@@ -37,15 +38,10 @@ encoder:
       formula: "AaBaCaZa"
 ...
 
-u	看
-i	上
-o	着
-a	那
-v	有
 EOF
 
 7z e -so "$file" '$dataFiles$\main.dmg' \
-    | ruby ddime2txt.rb '%{code}	%{text}' \
+    | ruby ddime2txt.rb '%{code}	%{text}	%{weight}' \
     | grep -v '$ddcmd([a-z/<]' \
     | grep -v '$ddcmd.*keyboard' \
     | grep -v '' \
