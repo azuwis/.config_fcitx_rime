@@ -26,9 +26,8 @@ end
 
 index = offset
 loop do
-  weight = data[index..index+1]
+  weight = data[index..index+1].unpack('S')[0]
   index = index + 2
-  weight = weight.unpack('S')[0]
 
   index = index + 2 # unknown
 
