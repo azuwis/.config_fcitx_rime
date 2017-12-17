@@ -9,7 +9,7 @@ file="$1"
 
 dict="jdyb.dict.yaml"
 
-version="$(echo "$file" | grep -o '[0-9][0-9.-]*[0-9]')"
+version="$(stat -c %y "$file" | cut -d' ' -f1 | tr '-' '.')"
 
 cat > "$dict" <<EOF
 # Rime dict
