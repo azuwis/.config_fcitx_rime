@@ -26,10 +26,8 @@ end
 
 index = offset
 loop do
-  weight = data[index..index+1].unpack('S')[0]
-  index = index + 2
-
-  index = index + 2 # unknown
+  weight = data[index..index+3].unpack('L')[0]
+  index = index + 4
 
   code_length = data[index].unpack('C')[0]
   index = index + 1
