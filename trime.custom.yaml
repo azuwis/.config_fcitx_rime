@@ -3,7 +3,8 @@ patch:
   "style/candidate_spacing": 0
   "style/inline_preedit": none
   "style/longpress_timeout": 300
-  "style/key_vibrate": true
+  "style/key_sound_volume": 0
+  "style/key_vibrate_duration": 30
   "style/horizontal_gap": 0
   "style/vertical_gap": 0
   "style/soft_cursor": false
