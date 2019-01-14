@@ -1,1 +1,6 @@
-/*
+/*.userdb/
+/.place_holder
+/build/
+/installation.yaml
+/luna_pinyin.*.dict.yaml
+/user.yaml
