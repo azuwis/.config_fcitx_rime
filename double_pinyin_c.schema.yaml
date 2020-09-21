@@ -1,0 +1,442 @@
+# Rime schema
+# encoding: utf-8
+
+schema:
+  schema_id: double_pinyin_c
+  name: C双拼
+  version: "0.1"
+  author:
+    - double pinyin layout by Cicin411
+    - Rime schema by Zhong Jianxin <azuwis@gmail.com>
+  description: |
+    明月拼音＋C双拼方案。
+  dependencies:
+    - stroke
+
+switches:
+  - name: ascii_mode
+    reset: 1
+    states: [ 中文, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: simplification
+    states: [ 漢字, 汉字 ]
+    reset: 1
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    # - table_translator@fixed
+    - script_translator
+  filters:
+    # - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcba;
+  delimiter: " '"
+  algebra:
+    - xform/^fa$/FJ/
+    - xform/^bang$/BM/
+    - xform/^bei$/B;/
+    - xform/^ji$/JD/
+    - xform/^bin$/BK/
+    - xform/^cou$/CO/
+    - xform/^cuan$/CM/
+    - xform/^gun$/G;/
+    - xform/^wa$/WJ/
+    - xform/^cang$/CG/
+    - xform/^fei$/FI/
+    - xform/^li$/LD/
+    - xform/^jin$/JT/
+    - xform/^chou$/UQ/
+    - xform/^chuan$/UR/
+    - xform/^qun$/Q;/
+    - xform/^za$/ZM/
+    - xform/^tang$/TM/
+    - xform/^gei$/GS/
+    - xform/^mi$/MZ/
+    - xform/^lin$/LT/
+    - xform/^dou$/DO/
+    - xform/^duan$/DM/
+    - xform/^run$/R;/
+    - xform/^wang$/WG/
+    - xform/^hei$/HS/
+    - xform/^ni$/NZ/
+    - xform/^min$/MT/
+    - xform/^fou$/FO/
+    - xform/^guan$/GM/
+    - xform/^sun$/S;/
+    - xform/^a$/AH/
+    - xform/^chang$/UG/
+    - xform/^lei$/LS/
+    - xform/^pi$/PE/
+    - xform/^nin$/NT/
+    - xform/^gou$/GO/
+    - xform/^huan$/HR/
+    - xform/^tun$/T;/
+    - xform/^dang$/DG/
+    - xform/^mei$/MS/
+    - xform/^pin$/PT/
+    - xform/^hou$/HQ/
+    - xform/^juan$/JR/
+    - xform/^cun$/CC/
+    - xform/^fang$/FH/
+    - xform/^nei$/NS/
+    - xform/^qin$/QK/
+    - xform/^kou$/KQ/
+    - xform/^kuan$/KR/
+    - xform/^chun$/UC/
+    - xform/^cha$/UA/
+    - xform/^gang$/GG/
+    - xform/^pei$/PS/
+    - xform/^xin$/XK/
+    - xform/^lou$/LQ/
+    - xform/^luan$/LR/
+    - xform/^dun$/DC/
+    - xform/^hang$/HG/
+    - xform/^wei$/WI/
+    - xform/^shi$/IS/
+    - xform/^yin$/EK/
+    - xform/^mou$/MQ/
+    - xform/^nuan$/NR/
+    - xform/^hun$/HC/
+    - xform/^kang$/KG/
+    - xform/^zei$/Z;/
+    - xform/^bing$/BP/
+    - xform/^nou$/NQ/
+    - xform/^quan$/QM/
+    - xform/^jun$/JC/
+    - xform/^lang$/LG/
+    - xform/^ben$/BK/
+    - xform/^ding$/DF/
+    - xform/^pou$/PQ/
+    - xform/^ruan$/RM/
+    - xform/^kun$/KC/
+    - xform/^mang$/MG/
+    - xform/^cen$/CK/
+    - xform/^yi$/EI/
+    - xform/^jing$/JF/
+    - xform/^rou$/RO/
+    - xform/^suan$/SM/
+    - xform/^lun$/LC/
+    - xform/^nang$/NG/
+    - xform/^chen$/UT/
+    - xform/^ling$/LF/
+    - xform/^sou$/SO/
+    - xform/^shuan$/IR/
+    - xform/^shun$/IC/
+    - xform/^pang$/PG/
+    - xform/^fen$/FK/
+    - xform/^zhi$/VI/
+    - xform/^ming$/MF/
+    - xform/^shou$/IQ/
+    - xform/^tuan$/TM/
+    - xform/^xun$/XC/
+    - xform/^rang$/RH/
+    - xform/^gen$/GK/
+    - xform/^dia$/DX/
+    - xform/^ning$/NF/
+    - xform/^tou$/TO/
+    - xform/^xuan$/XM/
+    - xform/^yun$/YC/
+    - xform/^sang$/SG/
+    - xform/^hen$/HD/
+    - xform/^xia$/XL/
+    - xform/^ping$/PF/
+    - xform/^you$/EO/
+    - xform/^yuan$/EM/
+    - xform/^zun$/ZC/
+    - xform/^sha$/IA/
+    - xform/^shang$/IG/
+    - xform/^ken$/KD/
+    - xform/^lia$/LX/
+    - xform/^qing$/QP/
+    - xform/^zou$/ZO/
+    - xform/^zuan$/ZM/
+    - xform/^zhun$/OC/
+    - xform/^yang$/EG/
+    - xform/^men$/MD/
+    - xform/^jia$/JA/
+    - xform/^ting$/TP/
+    - xform/^zhou$/OQ/
+    - xform/^zhuan$/OR/
+    - xform/^cuo$/CP/
+    - xform/^zang$/ZG/
+    - xform/^nen$/NK/
+    - xform/^qia$/QL/
+    - xform/^xing$/XP/
+    - xform/^er$/EH/
+    - xform/^chuang$/UZ/
+    - xform/^chuo$/UP/
+    - xform/^zha$/OA/
+    - xform/^zhang$/OG/
+    - xform/^pen$/PK/
+    - xform/^bian$/BL/
+    - xform/^ying$/EP/
+    - xform/^guang$/GZ/
+    - xform/^duo$/DP/
+    - xform/^bai$/BH/
+    - xform/^bao$/BJ/
+    - xform/^ren$/RK/
+    - xform/^tian$/TK/
+    - xform/^jiong$/JS/
+    - xform/^huang$/HZ/
+    - xform/^guo$/GP/
+    - xform/^cai$/CH/
+    - xform/^cao$/CJ/
+    - xform/^sen$/SK/
+    - xform/^dian$/DW/
+    - xform/^qiong$/QL/
+    - xform/^chu$/UF/
+    - xform/^kuang$/KZ/
+    - xform/^huo$/HB/
+    - xform/^chai$/UX/
+    - xform/^chao$/UB/
+    - xform/^shen$/IT/
+    - xform/^jian$/JW/
+    - xform/^xiong$/XL/
+    - xform/^shuang$/IZ/
+    - xform/^kuo$/KB/
+    - xform/^dai$/DH/
+    - xform/^dao$/DJ/
+    - xform/^wen$/WK/
+    - xform/^lian$/LW/
+    - xform/^diu$/DQ/
+    - xform/^zhuang$/OZ/
+    - xform/^luo$/LB/
+    - xform/^gai$/GH/
+    - xform/^gao$/GJ/
+    - xform/^zen$/ZK/
+    - xform/^mian$/MW/
+    - xform/^jiu$/JQ/
+    - xform/^jue$/JB/
+    - xform/^nuo$/NP/
+    - xform/^hai$/HH/
+    - xform/^hao$/HJ/
+    - xform/^zhen$/OT/
+    - xform/^nian$/NW/
+    - xform/^liu$/LQ/
+    - xform/^hu$/HF/
+    - xform/^lue$/LB/
+    - xform/^ruo$/RP/
+    - xform/^kai$/KH/
+    - xform/^kao$/KJ/
+    - xform/^beng$/BD/
+    - xform/^pian$/PW/
+    - xform/^miu$/MQ/
+    - xform/^ju$/JV/
+    - xform/^nue$/N;/
+    - xform/^suo$/SP/
+    - xform/^lai$/LH/
+    - xform/^lao$/LJ/
+    - xform/^ceng$/CK/
+    - xform/^qian$/QN/
+    - xform/^niu$/NQ/
+    - xform/^ku$/KF/
+    - xform/^que$/Q;/
+    - xform/^shuo$/IB/
+    - xform/^mai$/MX/
+    - xform/^mao$/MB/
+    - xform/^cheng$/UD/
+    - xform/^xian$/XN/
+    - xform/^qiu$/QO/
+    - xform/^lu$/LV/
+    - xform/^xue$/X;/
+    - xform/^tuo$/TP/
+    - xform/^nai$/NX/
+    - xform/^nao$/NB/
+    - xform/^deng$/DD/
+    - xform/^jiang$/JG/
+    - xform/^xiu$/XO/
+    - xform/^mu$/MV/
+    - xform/^yue$/E;/
+    - xform/^zuo$/ZP/
+    - xform/^pai$/PH/
+    - xform/^pao$/PJ/
+    - xform/^feng$/FD/
+    - xform/^liang$/LG/
+    - xform/^nu$/NV/
+    - xform/^cui$/C;/
+    - xform/^zhuo$/OB/
+    - xform/^sai$/SH/
+    - xform/^rao$/RJ/
+    - xform/^geng$/GK/
+    - xform/^niang$/NG/
+    - xform/^sui$/S;/
+    - xform/^shai$/IX/
+    - xform/^sao$/SJ/
+    - xform/^heng$/HD/
+    - xform/^qiang$/QH/
+    - xform/^ang$/AG/
+    - xform/^pu$/PV/
+    - xform/^zui$/Z;/
+    - xform/^tai$/TH/
+    - xform/^shao$/AJ/
+    - xform/^keng$/KD/
+    - xform/^xiang$/XH/
+    - xform/^mo$/MQ/
+    - xform/^chui$/UV/
+    - xform/^wai$/WH/
+    - xform/^tao$/TJ/
+    - xform/^leng$/LK/
+    - xform/^biao$/BB/
+    - xform/^po$/PQ/
+    - xform/^dui$/D;/
+    - xform/^zai$/ZH/
+    - xform/^yao$/EJ/
+    - xform/^meng$/MD/
+    - xform/^diao$/DB/
+    - xform/^gui$/G;/
+    - xform/^zhai$/OX/
+    - xform/^zao$/ZJ/
+    - xform/^neng$/ND/
+    - xform/^jiao$/JJ/
+    - xform/^shu$/IF/
+    - xform/^hui$/HV/
+    - xform/^ban$/BN/
+    - xform/^zhao$/OJ/
+    - xform/^peng$/PD/
+    - xform/^liao$/LZ/
+    - xform/^o$/OH/
+    - xform/^kui$/KV/
+    - xform/^can$/CN/
+    - xform/^ge$/GI/
+    - xform/^reng$/RD/
+    - xform/^miao$/MB/
+    - xform/^rui$/R;/
+    - xform/^chan$/UW/
+    - xform/^ce$/CY/
+    - xform/^seng$/SK/
+    - xform/^niao$/NB/
+    - xform/^yo$/EO/
+    - xform/^shui$/IV/
+    - xform/^dan$/DN/
+    - xform/^che$/UE/
+    - xform/^sheng$/ID/
+    - xform/^piao$/PJ/
+    - xform/^cong$/CL/
+    - xform/^yu$/EU/
+    - xform/^tui$/T;/
+    - xform/^fan$/FN/
+    - xform/^de$/DK/
+    - xform/^teng$/TD/
+    - xform/^qiao$/QJ/
+    - xform/^chong$/US/
+    - xform/^zhui$/OV/
+    - xform/^gan$/GN/
+    - xform/^e$/E;/
+    - xform/^weng$/WD/
+    - xform/^tiao$/TJ/
+    - xform/^dong$/DL/
+    - xform/^zhu$/OF/
+    - xform/^han$/HW/
+    - xform/^zeng$/ZK/
+    - xform/^xiao$/XJ/
+    - xform/^gong$/GL/
+    - xform/^gua$/GA/
+    - xform/^kan$/KW/
+    - xform/^zheng$/OD/
+    - xform/^bie$/BY/
+    - xform/^hong$/HL/
+    - xform/^hua$/HA/
+    - xform/^lan$/LN/
+    - xform/^die$/DY/
+    - xform/^kong$/KS/
+    - xform/^kua$/KM/
+    - xform/^man$/MN/
+    - xform/^jie$/JE/
+    - xform/^long$/LL/
+    - xform/^shua$/IM/
+    - xform/^nan$/NN/
+    - xform/^lie$/LZ/
+    - xform/^nong$/NL/
+    - xform/^zhua$/OM/
+    - xform/^pan$/PN/
+    - xform/^re$/RY/
+    - xform/^chi$/;I/
+    - xform/^mie$/ME/
+    - xform/^rong$/RL/
+    - xform/^chuai$/UX/
+    - xform/^ran$/RN/
+    - xform/^se$/SY/
+    - xform/^nie$/NE/
+    - xform/^song$/SL/
+    - xform/^guai$/GH/
+    - xform/^san$/SN/
+    - xform/^she$/IE/
+    - xform/^pie$/PZ/
+    - xform/^tong$/TL/
+    - xform/^huai$/HX/
+    - xform/^shan$/IW/
+    - xform/^te$/TY/
+    - xform/^qie$/QY/
+    - xform/^yong$/EL/
+    - xform/^kuai$/KX/
+    - xform/^tan$/TN/
+    - xform/^tie$/TY/
+    - xform/^zong$/ZL/
+    - xform/^shuai$/IX/
+    - xform/^wan$/WN/
+    - xform/^ze$/ZY/
+    - xform/^xie$/XY/
+    - xform/^zhong$/OS/
+    - xform/^zhuai$/OX/
+    - xform/^yan$/EN/
+    - xform/^zhe$/OE/
+    - xform/^zan$/ZN/
+    - xform/^zhan$/OW/
+    - xlit/ZYXWVUTSRQPONMLKJIHGFEDCBA/zyxwvutsrqponmlkjihgfedcba/
+
+translator:
+  dictionary: double_pinyin_c
+  prism: double_pinyin_c
+
+fixed:
+  dictionary: double_pinyin_c.fixed
+  prism: double_pinyin_c.fixed
+  enable_completion: false
+  enable_user_dict: false
+  enable_encoder: false
+  enable_sentence: false
+  initial_quality: 9999
+
+reverse_lookup:
+  dictionary: stroke
+  enable_completion: true
+  prefix: "`"
+  suffix: "'"
+  tips: 〔筆畫〕
+  preedit_format:
+    - xlit/hspnz/一丨丿丶乙/
+  comment_format:
+    - xform/([nl])v/$1ü/
+
+punctuator:
+  import_preset: default
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "`[a-z]*'?$"
