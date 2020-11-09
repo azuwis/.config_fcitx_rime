@@ -406,7 +406,7 @@ speller:
     - xlit/ZYXWVUTSRQPONMLKJIHGFEDCBA/zyxwvutsrqponmlkjihgfedcba/
 
 translator:
-  dictionary: double_pinyin_c
+  dictionary: aurora_pinyin
   prism: double_pinyin_c
 
 reverse_lookup:
