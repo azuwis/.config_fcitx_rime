@@ -44,7 +44,6 @@ engine:
   translators:
     - punct_translator
     - reverse_lookup_translator
-    # - table_translator@fixed
     - script_translator
   filters:
     # - simplifier
@@ -409,15 +408,6 @@ speller:
 translator:
   dictionary: double_pinyin_c
   prism: double_pinyin_c
-
-fixed:
-  dictionary: double_pinyin_c.fixed
-  prism: double_pinyin_c.fixed
-  enable_completion: false
-  enable_user_dict: false
-  enable_encoder: false
-  enable_sentence: false
-  initial_quality: 9999
 
 reverse_lookup:
   dictionary: stroke

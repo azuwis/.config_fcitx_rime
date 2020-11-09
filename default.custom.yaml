@@ -5,8 +5,8 @@ patch:
     - "Control+grave"
   schema_list:
     - schema: flypy
-    - schema: luna_pinyin_simp
-    # - schema: double_pinyin_flypy
+    - schema: aurora_pinyin
+    - schema: double_pinyin_c
   key_binder/bindings:
     - {accept: minus, send: Page_Up, when: has_menu}
     - {accept: equal, send: Page_Down, when: has_menu}
