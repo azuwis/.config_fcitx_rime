@@ -1,6 +1,9 @@
 /*.userdb/
 /.place_holder
+/aurora_pinyin.dict.yaml
+/aurora_pinyin.schema.yaml
 /build/
 /installation.yaml
-/luna_pinyin.*.dict.yaml
+/sync/
 /user.yaml
+/zhwiki.dict.yaml
