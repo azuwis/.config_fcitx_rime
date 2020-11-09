@@ -1,7 +1,0 @@
-# Custom luna pinyin
-
-patch:
-  "switches/@0/reset": 1 # default english
-  "translator/dictionary": luna_pinyin.extended
-  "punctuator/import_preset": symbols
-  "recognizer/patterns/punct": "^/[0-9]*[a-z]*$"
