@@ -1,3 +1,5 @@
 patch:
-  "style/color_scheme": dark_temple
+  "style/color_scheme": google
   "style/display_tray_icon": true
+  "style/horizontal": true
+  "style/inline_preedit": true
