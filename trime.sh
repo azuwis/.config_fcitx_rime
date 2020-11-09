@@ -5,7 +5,7 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 adb shell mkdir -p /sdcard/rime/
 
-for i in double_pinyin_c.dict.yaml double_pinyin_c.schema.yaml aurora_pinyin.dict.yaml zhwiki.dict.yaml tongwenfeng.trime.custom.yaml
+for i in double_pinyin_c.schema.yaml aurora_pinyin.dict.yaml zhwiki.dict.yaml tongwenfeng.trime.custom.yaml
 do
     adb push "$i" /sdcard/rime/
 done
