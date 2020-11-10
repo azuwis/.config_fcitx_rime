@@ -11,7 +11,7 @@ do
 done
 
 temp_file="$(mktemp)"
-sed -e '/- schema:/d' -e '/^schema_list:/a \  - schema: double_pinyin_c' /usr/share/rime-data/default.yaml > "$temp_file"
+sed -e '/- schema:/d' -e '/^schema_list:/a \  - schema: double_pinyin_c' -e 's/^  page_size: .*/  page_size: 10/' /usr/share/rime-data/default.yaml > "$temp_file"
 adb push "$temp_file" /sdcard/rime/default.yaml
 rm "$temp_file"
 
