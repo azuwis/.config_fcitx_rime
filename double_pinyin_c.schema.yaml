@@ -406,6 +406,7 @@ speller:
     - xform/^zhe$/OE/
     - xform/^zan$/ZN/
     - xform/^zhan$/OW/
+    - xform/^dei$/DS/
     - xlit/ZYXWVUTSRQPONMLKJIHGFEDCBA/zyxwvutsrqponmlkjihgfedcba/
 
 translator:
