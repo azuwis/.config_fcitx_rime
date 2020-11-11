@@ -5,7 +5,17 @@ cd "$(dirname "$(readlink -f "$0")")"
 
 adb shell mkdir -p /sdcard/rime/
 
-for i in double_pinyin_c.schema.yaml aurora_pinyin.dict.yaml zhwiki.dict.yaml tongwenfeng.trime.custom.yaml
+for i in \
+  double_pinyin_c.schema.yaml \
+  double_pinyin_c.custom.yaml \
+  luna_pinyin.extended.dict.yaml \
+  /usr/share/rime-data/essay.txt \
+  /usr/share/rime-data/symbols.yaml \
+  /usr/share/rime-data/luna_pinyin.dict.yaml \
+  zhwiki.dict.yaml \
+  grammar.yaml \
+  zh-hant-t-essay-bgw.gram \
+  tongwenfeng.trime.custom.yaml
 do
     adb push "$i" /sdcard/rime/
 done
@@ -16,6 +26,7 @@ adb push "$temp_file" /sdcard/rime/default.yaml
 rm "$temp_file"
 
 # adb shell am start -n com.osfans.trime/.Pref
-#adb shell 'unzip -p "$(pm path com.osfans.trime | cut -d : -f 2)" assets/rime/trime.yaml > /sdcard/rime/trime.yaml'
+# To make opencc work, Input -> Reset -> opencc
+adb shell 'unzip -p "$(pm path com.osfans.trime | cut -d : -f 2)" assets/rime/trime.yaml > /sdcard/rime/trime.yaml'
 adb shell 'unzip -p "$(pm path com.osfans.trime | cut -d : -f 2)" assets/rime/tongwenfeng.trime.yaml > /sdcard/rime/tongwenfeng.trime.yaml'
 adb shell am broadcast -a com.osfans.trime.deploy
