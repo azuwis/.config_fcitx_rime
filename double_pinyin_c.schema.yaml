@@ -46,13 +46,16 @@ engine:
     - reverse_lookup_translator
     - script_translator
   filters:
-    # - simplifier
+    - simplifier
     - uniquifier
 
 speller:
   alphabet: zyxwvutsrqponmlkjihgfedcba;
   delimiter: " '"
   algebra:
+    - erase/^xx$/
+    - derive/^([jqxy])u$/$1v/
+    - derive/^([aoe])([ioun])$/$1$1$2/
     - xform/^fa$/FJ/
     - xform/^bang$/BM/
     - xform/^bei$/B;/
@@ -406,7 +409,7 @@ speller:
     - xlit/ZYXWVUTSRQPONMLKJIHGFEDCBA/zyxwvutsrqponmlkjihgfedcba/
 
 translator:
-  dictionary: aurora_pinyin
+  dictionary: luna_pinyin.extended
   prism: double_pinyin_c
 
 reverse_lookup:
