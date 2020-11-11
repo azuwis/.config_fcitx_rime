@@ -4,8 +4,7 @@ patch:
   switcher/hotkeys:
     - "Control+grave"
   schema_list:
-    - schema: flypy
-    - schema: aurora_pinyin
+    - schema: luna_pinyin_simp
     - schema: double_pinyin_c
   key_binder/bindings:
     - {accept: minus, send: Page_Up, when: has_menu}
