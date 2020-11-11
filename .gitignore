@@ -1,9 +1,9 @@
 /*.userdb/
 /.place_holder
-/aurora_pinyin.dict.yaml
-/aurora_pinyin.schema.yaml
 /build/
+/grammar.yaml
 /installation.yaml
 /sync/
 /user.yaml
+/zh-hant-t-essay-bgw.gram
 /zhwiki.dict.yaml
