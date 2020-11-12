@@ -1,4 +1,7 @@
 patch:
+  "style/candidate_text_size": 20
+  "style/layout/max_entries": 10
+  "style/layout/max_width": 720
   "preset_keys/SecondChoice": {label: ⎇, send: semicolon}
   "preset_keyboards/default":
     author: "暖暖"
@@ -43,7 +46,7 @@ patch:
       - {click: ',', label: '，', long_click: '<>{Left}', key_back_color: bh4, key_text_color: th4}
       - {click: space, long_click: Mode_switch, swipe_left: "Left", swipe_right: "Right", swipe_up: Schema_switchcn, width: 30, key_back_color: bkg, key_text_color: tkg}
       - {click: '.', label: '。', long_click: Keyboard_kao, key_back_color: bh4, key_text_color: th4}
-      - {click: space_R2, long_click: '?', key_text_size: "18", key_back_color: bh4, key_text_color: th4}
+      - {click: '/', long_click: '?', key_text_size: "18", key_back_color: bh4, key_text_color: th4}
       - {click: Return, swipe_up: Escape, width: 15, key_back_color: benter, key_text_color: tenter}
   "preset_keyboards/flypy":
     author: "暖暖"
