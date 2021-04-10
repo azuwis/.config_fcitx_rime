@@ -4,18 +4,18 @@ set -eu
 cd "$(dirname "$(readlink -f "$0")")"
 
 adb shell mkdir -p /sdcard/rime/
+adb shell rm -rf /sdcard/rime/build/
 
 for i in \
-  double_pinyin_c.schema.yaml \
-  double_pinyin_c.custom.yaml \
-  luna_pinyin.extended.dict.yaml \
-  /usr/share/rime-data/essay.txt \
+  *.dict.yaml \
+  /usr/share/rime-data/key_bindings.yaml \
+  /usr/share/rime-data/punctuation.yaml \
   /usr/share/rime-data/symbols.yaml \
-  /usr/share/rime-data/luna_pinyin.dict.yaml \
-  zhwiki.dict.yaml \
+  double_pinyin_c.custom.yaml \
+  double_pinyin_c.schema.yaml \
   grammar.yaml \
-  zh-hant-t-essay-bgw.gram \
-  tongwenfeng.trime.custom.yaml
+  tongwenfeng.trime.custom.yaml \
+  zh-hans-t-essay-bgw.gram
 do
     adb push "$i" /sdcard/rime/
 done
