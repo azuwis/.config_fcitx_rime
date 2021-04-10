@@ -1,9 +1,11 @@
 /*.userdb/
 /.place_holder
+/THUOCL_*.dict.yaml
 /build/
+/clover.*
 /grammar.yaml
 /installation.yaml
+/sogou_new_words.dict.yaml
 /sync/
 /user.yaml
-/zh-hant-t-essay-bgw.gram
-/zhwiki.dict.yaml
+/zh-hans-t-essay-bgw.gram

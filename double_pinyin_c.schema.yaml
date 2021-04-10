@@ -410,7 +410,7 @@ speller:
     - xlit/ZYXWVUTSRQPONMLKJIHGFEDCBA/zyxwvutsrqponmlkjihgfedcba/
 
 translator:
-  dictionary: luna_pinyin.extended
+  dictionary: clover
   prism: double_pinyin_c
 
 reverse_lookup:
