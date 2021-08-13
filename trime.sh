@@ -11,7 +11,6 @@ for i in \
   /usr/share/rime-data/key_bindings.yaml \
   /usr/share/rime-data/punctuation.yaml \
   /usr/share/rime-data/symbols.yaml \
-  double_pinyin_c.custom.yaml \
   double_pinyin_c.schema.yaml \
   grammar.yaml \
   tongwenfeng.trime.custom.yaml \
