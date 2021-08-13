@@ -16,12 +16,12 @@ schema:
 switches:
   - name: ascii_mode
     reset: 1
-    states: [ 中文, 西文 ]
+    states: [ 中, 英 ]
+  - name: zh_simp_s2t
+    reset: 0
+    states: [ 简, 繁 ]
   - name: full_shape
-    states: [ 半角, 全角 ]
-  - name: simplification
-    states: [ 漢字, 汉字 ]
-    reset: 1
+    states: [ 半, 全 ]
   - name: ascii_punct
     states: [ 。，, ．， ]
 
@@ -412,6 +412,10 @@ speller:
 translator:
   dictionary: clover
   prism: double_pinyin_c
+
+simplifier:
+  option_name: zh_simp_s2t
+  opencc_config: s2t.json
 
 reverse_lookup:
   dictionary: clover
