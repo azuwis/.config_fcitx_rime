@@ -1,0 +1,5 @@
+patch:
+  app_options/io.alacritty:
+    ascii_mode: true
+    no_inline: true
+  style/font_point: 18
