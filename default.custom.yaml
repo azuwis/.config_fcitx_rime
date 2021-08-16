@@ -1,11 +1,6 @@
-# Custom default
-
 patch:
   switcher/hotkeys:
-    - "Control+grave"
+    - Control+grave
   schema_list:
+    - schema: csp
     - schema: luna_pinyin
-    - schema: double_pinyin_c
-  key_binder/bindings:
-    - {accept: minus, send: Page_Up, when: has_menu}
-    - {accept: equal, send: Page_Down, when: has_menu}

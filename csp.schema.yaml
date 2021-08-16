@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 schema:
-  schema_id: double_pinyin_c
+  schema_id: csp
   name: C双拼
   version: "0.1"
   author:
@@ -10,8 +10,6 @@ schema:
     - Rime schema by Zhong Jianxin <azuwis@gmail.com>
   description: |
     C双拼方案。
-  dependencies:
-    - stroke
 
 switches:
   - name: ascii_mode
@@ -411,7 +409,7 @@ speller:
 
 translator:
   dictionary: clover
-  prism: double_pinyin_c
+  prism: csp
 
 simplifier:
   option_name: zh_simp_s2t
