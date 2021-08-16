@@ -11,7 +11,7 @@ for i in \
   /usr/share/rime-data/key_bindings.yaml \
   /usr/share/rime-data/punctuation.yaml \
   /usr/share/rime-data/symbols.yaml \
-  double_pinyin_c.schema.yaml \
+  csp.schema.yaml \
   grammar.yaml \
   tongwenfeng.trime.custom.yaml \
   zh-hans-t-essay-bgw.gram
@@ -20,7 +20,7 @@ do
 done
 
 temp_file="$(mktemp)"
-sed -e '/- schema:/d' -e '/^schema_list:/a \  - schema: double_pinyin_c' -e 's/^  page_size: .*/  page_size: 10/' /usr/share/rime-data/default.yaml > "$temp_file"
+sed -e '/- schema:/d' -e '/^schema_list:/a \  - schema: csp' -e 's/^  page_size: .*/  page_size: 10/' /usr/share/rime-data/default.yaml > "$temp_file"
 adb push "$temp_file" /sdcard/rime/default.yaml
 rm "$temp_file"
 
